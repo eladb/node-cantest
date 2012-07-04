@@ -1,4 +1,4 @@
- cantest - silly testing for canvas static output
+# cantest - silly testing for canvas static output
 
 [![Build Status](https://secure.travis-ci.org/eladb/node-cantest.png)](http://travis-ci.org/eladb/node-cantest)
 
