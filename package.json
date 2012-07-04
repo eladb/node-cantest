@@ -1,0 +1,28 @@
+{
+  "author": "Elad Ben-Israel <elad.benisrael@gmail.com> (hackingonstuff.net)",
+  "name": "cantest",
+  "description": "Canvas visual testing",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/eladb/node-cantest.git"
+  },
+  "main": "lib/cantest",
+  "dependencies": {
+    "async": "0.1.22",
+    "optimist": "0.3.4",
+    "canvas": "0.12.1",
+    "open": "0.0.2"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  },
+  "scripts": {
+    "test": "cd test && ./runtests.sh"
+  },
+  "bin": {
+    "cantest": "bin/cantest"
+  }
+}

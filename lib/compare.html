@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>{{test}}</title>
+
+    <style>
+
+      img {
+        border: 1px black solid;
+      }
+
+      .name {
+        color: green;
+      }
+
+      td {
+        text-align: center;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <h1>{{test}}</h1>
+
+    <!-- I know, tables are frowned upon -->
+    <table>
+      <tr>
+        <td><a href='{{expected}}'><img src="{{expected}}"></a></td>
+        <td><a href='{{actual}}'><img src="{{actual}}"></a></td>
+      </tr>
+      <tr>
+        <td>
+          <h2>Expected</h2>
+        </td>
+        <td>
+          <h2>Actual</h2>
+        </td>
+      </tr>
+    </table>
+
+    <hr/>
+
+    <h3>Error information:</h3>
+    <pre>
+      {{error}}
+    </pre>
+
+  </body>
+
+</html>

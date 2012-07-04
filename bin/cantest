@@ -1,0 +1,61 @@
+#!/usr/bin/env node
+var async = require('async');
+var open = require('open');
+var path = require('path');
+
+var cantest = require('..');
+
+var optimist = require('optimist')
+  .usage('Usage: $0 <files...> {options}')
+  .describe('b', 'Open browser if test fails to compare results (use --no-browse to negate)').alias('b', 'browse').default('b', true)
+  .describe('v', 'Verbose output').alias('v', 'verbose').default('v', false)
+  .describe('h', 'Show help').alias('h', 'help');
+
+var argv = optimist.argv;
+
+if (argv.h) {
+  process.stdout.write(optimist.help());
+  return;
+}
+
+var files = argv._ = argv._ || [];
+var exitCode = 0;
+
+return async.forEach(files, function(file, cb) {
+
+  return cantest(file, function(err, result) {
+    if (err) {
+      console.error('[' + file + ']', err);
+      return cb();
+    }
+
+    if (!result.passed) {
+      exitCode = 1;
+
+      if (result.compare) {
+        console.error('[' + file + ']', 'Test failed. See actual output in ' + result.actual);
+      }
+      else {
+        console.error('[' + file + ']', path.relative(path.dirname(path.resolve(file)), result.expected) + ' created');
+      }
+
+      if (argv.verbose) console.error(result.error);
+
+      if (argv.browse && result.compare) {
+        open(result.compare);
+      }
+
+
+    }
+    else {
+      if (argv.verbose) {
+        console.info('[' + file + ']', 'Test passed');
+      }
+    }
+
+    return cb();
+  });
+
+}, function() {
+  process.exit(exitCode);
+});
