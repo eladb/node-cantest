@@ -1,5 +1,7 @@
  cantest - silly testing for canvas static output
 
+[![Build Status](https://secure.travis-ci.org/eladb/node-cantest.png)](http://travis-ci.org/eladb/node-cantest)
+
 __cantest__ is a simple way to validate that a canvas drawing function did not break.
 It basically executes the test and compares the PNG result to an expected PNG file.
 
