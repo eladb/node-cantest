@@ -7,12 +7,6 @@ It basically executes the test and compares the PNG result to an expected PNG fi
 
 Note that for now __cantest__ can be used (for now) only for static outputs, but it's cool anyway :-).
 
-<pre>
-____ ____ _  _ ___ ____ ____ ___ 
-|    |__| |\ |  |  |___ [__   |  
-|___ |  | | \|  |  |___ ___]  |  
-</pre>
-
 Use [npm](npmjs.org) to install __cantest__:
 
 ```bash
