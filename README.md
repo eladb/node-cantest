@@ -7,11 +7,11 @@ It basically executes the test and compares the PNG result to an expected PNG fi
 
 Note that for now __cantest__ can be used (for now) only for static outputs, but it's cool anyway :-).
 
-```
+<pre>
 ____ ____ _  _ ___ ____ ____ ___ 
 |    |__| |\ |  |  |___ [__   |  
 |___ |  | | \|  |  |___ ___]  |  
-```
+</pre>
 
 Use [npm](npmjs.org) to install __cantest__:
 
@@ -70,19 +70,19 @@ Next time you run the test, it should succeed quitely:
 
 ```bash
 $ cantest mytest.js
-$
+$ 
 ```
 
 Now, change something in `mytest.js`. For example, replace:
 
 ```js
-  ctx.fillStyle = 'orange';
+ctx.fillStyle = 'orange';
 ```
 
 With:
 
 ```js
-  ctx.fillStyle = 'green';
+ctx.fillStyle = 'green';
 ```
 
 And when you run __cantest__ again:
@@ -94,7 +94,7 @@ $ cantest mytest.js
 
 The browser window should also open and you should see:
 
-![failure](doc/failure.png)
+![failure](https://github.com/eladb/node-cantest/raw/master/doc/failure.png)
 
 
 ## Command line
