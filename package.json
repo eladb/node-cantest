@@ -2,7 +2,7 @@
   "author": "Elad Ben-Israel <elad.benisrael@gmail.com> (hackingonstuff.net)",
   "name": "cantest",
   "description": "Canvas visual testing",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "git://github.com/eladb/node-cantest.git"

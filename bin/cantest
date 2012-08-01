@@ -25,7 +25,7 @@ return async.forEach(files, function(file, cb) {
 
   return cantest(file, function(err, result) {
     if (err) {
-      console.error('[' + file + ']', err);
+      console.error('[' + file + ']', err.stack);
       return cb();
     }
 
